@@ -1,0 +1,26 @@
+﻿ @model List<IleriRepository.DTO.SehirDTO>
+<h2>Sehir Listesi</h2>
+<hr />
+<form>
+    <input type="submit" value="Yeni Kayıt" formaction="/Sehir/Add" />
+</form>
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Ad</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>@item.SehirId</td>
+    <td>@item.SehirAd</td>
+    <td><a href="/Sehir/Delete/@item.SehirId">Sil</a></td>
+    <td><a href="/Sehir/Update/@item.SehirId">Güncelle</a></td>
+     
+</tr>
+    }
+
+</table>
+

@@ -1,0 +1,17 @@
+﻿@model IleriRepository.Models.ViewModel.SehirModel
+ 
+<h2>@Model.Header</h2>
+<hr />
+<form method="post">
+    <div class="form-group">
+        <input type="hidden" name="Sehir.SehirId" value="@Model.Sehir.SehirId" />
+    </div>
+    <div>
+        <label>Sehir Ad</label>
+        <input class="form-control" type="text" name="Sehir.SehirAd" value="@Model.Sehir.SehirAd" />
+    </div>
+    <input class="@Model.BtnClass" type="submit" value="@Model.BtnText" />
+</form>
+<form>
+    <input class="btn btn-warning" type="submit" value="İptal" formaction="/Sehir/List" />
+</form>
